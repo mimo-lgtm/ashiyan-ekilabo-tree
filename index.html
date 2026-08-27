@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code for Ashiya - 市民主導の民主主義ハックプラットフォーム</title>
+    <title>Code for Ashiya - 市民主導の民主主義・ハックプラットフォーム</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,20 +20,37 @@
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-emerald-500/20">
-                    A
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 relative overflow-hidden group">
+                    <svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- C (Civic) -->
+                        <path d="M42 28C32 28 26 35 26 50C26 65 32 72 42 72" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+                        <!-- f (for) -->
+                        <path d="M52 28H64M58 28V62C58 67 61 70 66 70" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- A (Ashiya) / Connection Node -->
+                        <path d="M72 72L80 40L88 72M75 58H85" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="80" cy="35" r="4" fill="#34D399" />
+                    </svg>
+                    <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <span class="font-bold text-xl tracking-tight text-slate-900">Code for Ashiya</span>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900 block leading-tight">Code for Ashiya</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold tracking-wider uppercase block">Civic Tech Platform</span>
+                </div>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#prospectus" class="hover:text-emerald-600 transition-colors">設立趣旨書</a>
                 <a href="#about" class="hover:text-emerald-600 transition-colors">背景・課題</a>
                 <a href="#mechanisms" class="hover:text-emerald-600 transition-colors">3つのメカニズム</a>
                 <a href="#platforms" class="hover:text-emerald-600 transition-colors">プラットフォーム一覧</a>
-                <a href="#howitworks" class="hover:text-emerald-600 transition-colors">使い方</a>
-                <a href="#contact" class="hover:text-emerald-600 transition-colors">運営・お問い合わせ</a>
+                <a href="activity-report.html" class="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-chart-line text-xs"></i>活動報告
+                </a>
             </nav>
-            <div>
-                <a href="#platforms" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-all duration-200">
+            <div class="flex items-center space-x-3">
+                <a href="activity-report.html" class="hidden sm:inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-all border border-emerald-200">
+                    <i class="fa-solid fa-chart-line mr-1.5"></i>活動報告
+                </a>
+                <a href="#platforms" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-all duration-200">
                     プラットフォームを見る
                 </a>
             </div>
@@ -62,9 +79,104 @@
                     <a href="#platforms" class="px-8 py-3.5 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-lg shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5">
                         プラットフォームを見る →
                     </a>
-                    <a href="#about" class="px-8 py-3.5 text-base font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 rounded-xl shadow-sm transition-all">
-                        設立趣旨・背景を読む
+                    <a href="#prospectus" class="px-8 py-3.5 text-base font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 rounded-xl shadow-sm transition-all">
+                        設立趣旨書を読む
                     </a>
+                    <a href="activity-report.html" class="px-8 py-3.5 text-base font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 rounded-xl shadow-sm transition-all flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line mr-2"></i>活動報告を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 設立趣旨書セクション (Redesigned with Visual Polish) -->
+    <section id="prospectus" class="py-24 bg-gradient-to-b from-white via-slate-50/50 to-white border-b border-slate-200 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-teal-100/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold tracking-wider bg-emerald-100 text-emerald-800 mb-4 shadow-sm">
+                    <i class="fa-solid fa-scroll mr-2 text-emerald-600"></i>ESTABLISHMENT PROSPECTUS
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    設立趣旨書：テクノロジーと共創で、<br class="hidden sm:inline"><span class="text-emerald-600">社会の未来をハックする</span>
+                </h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Code for Ashiya が掲げる根本理念と、私たちが目指すオープンな未来への招待状。</p>
+            </div>
+
+            <!-- Card Container with visual accents -->
+            <div class="bg-white p-8 sm:p-14 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 relative">
+                <div class="absolute top-0 left-12 w-24 h-1.5 bg-emerald-600 rounded-full"></div>
+
+                <div class="prose prose-slate max-w-none space-y-8 text-slate-700 text-base sm:text-lg leading-relaxed">
+                    
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-extrabold">01</span>
+                            はじめに：なぜ「Code for Ashiya」を立ち上げるのか
+                        </h3>
+                        <p class="text-slate-600">
+                            私たちが生きるこの社会、そして身近な地域には、人口減少、高齢化、行政プロセスの限界、そして住民間の分断や対話の不足など、無数の課題が存在しています。これまで、こうした課題の多くは行政主導（トップダウン）で解決されることが前提となってきました。しかし、複雑化する現代において、行政単体での解決には限界があり、また住民の声が十分に届かない構造的な課題が生まれています。
+                        </p>
+                        <p class="text-slate-600 mt-3">
+                            私たちはこの現状に甘んじることなく、<strong>デジタルやAIをはじめとする先進的なテクノロジーを駆使し、市民の側から社会課題を解決する</strong>ために「Code for Ashiya」を立ち上げました。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-8">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-extrabold">02</span>
+                            デジタルとAIで社会課題に挑む
+                        </h3>
+                        <p class="text-slate-600">
+                            私たちが最初に取り組んでいる山手町の自治会活動や芦屋市の諸課題（未来会議、人口問題、子育て、公共施設再編など）における実証実験は、極めて重要なユースケースの一つに過ぎません。
+                        </p>
+                        <p class="text-slate-600 mt-3">
+                            音声認識やAIを活用して「誰も取り残さず」に「まとまった民意の塊」を可視化し、市民と行政が共に歩む共創のインフラを創る——。この取り組みをモデルケースとしながら、地域や芦屋市という枠組みだけに留まらず、<strong>デジタル・AIテクノロジーの力であらゆる社会課題を解決し、民主主義のOSをアップデートしていく集団</strong>でありたいと考えています。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-8">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-extrabold">03</span>
+                            参加への呼びかけ：皆さんの意志と協力が必要です
+                        </h3>
+                        <p class="text-slate-600">
+                            このビジョンは、少数の開発者や行政だけで成し遂げられるものではありません。プログラミングのスキルがあるかどうかも問いません。
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                                <i class="fa-solid fa-code text-emerald-600 text-xl mb-2"></i>
+                                <h4 class="font-bold text-slate-900 text-sm mb-1">技術で解決したい</h4>
+                                <p class="text-xs text-slate-500">地域の課題をデジタルやAIで形に</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                                <i class="fa-solid fa-seedling text-emerald-600 text-xl mb-2"></i>
+                                <h4 class="font-bold text-slate-900 text-sm mb-1">仕組みをデザイン</h4>
+                                <p class="text-xs text-slate-500">ボトムアップの民主主義を設計</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
+                                <i class="fa-solid fa-comments text-emerald-600 text-xl mb-2"></i>
+                                <h4 class="font-bold text-slate-900 text-sm mb-1">声を届ける</h4>
+                                <p class="text-xs text-slate-500">自分のアイデアで未来に参加</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">
+                            そんな熱意と志を持つすべての人に、私たちの門戸は開かれています。一人ひとりの小さな意志と協力が集まることでしか、社会の構造を動かすことはできません。ぜひ、このオープンな挑戦に参加してください。あなたのひと声と一歩が、未来の民主主義をハックする力になります。
+                        </p>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Code for Ashiya 創設者・運営一同</p>
+                            <p class="text-xs text-slate-500 mt-0.5">License: MIT / Open Source & Public Infrastructure</p>
+                        </div>
+                        <a href="#contact" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl shadow-sm transition-all">
+                            メンバーとして参加する →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +207,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">草の根の分断</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        自治会は高齢化・役員不足・新住民の孤立に直面。本来の合意形成が機能不全になってしまう危惧。
+                        自治会は高齢化・役員不足・新住民の孤立に直面。声の大きい人の利益誘導や不満の吐き溜めになり、本来の合意形成が機能不全に陥っています。
                     </p>
                 </div>
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
@@ -197,7 +309,7 @@
                         </p>
                     </div>
                     <div>
-                            <a href="https://mimo-lgtm.github.io/yamate/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-md transition-all">
+                        <a href="https://mimo-lgtm.github.io/community-association/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-md transition-all">
                             <span>プラットフォームを開く</span>
                             <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                         </a>
@@ -407,7 +519,7 @@
         </div>
     </section>
 
-    <!-- お問い合わせ / メンバー募集中！ (CONTACT & OSS) -->
+    <!-- お問い合わせ / メンバー応募 (CONTACT & OSS) -->
     <section id="contact" class="py-20 bg-slate-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-emerald-400 font-semibold text-sm tracking-wider uppercase">CONTACT & OSS</span>
@@ -445,7 +557,7 @@
                 <a href="https://github.com/mimo-lgtm/codeForAshiya" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-slate-900 bg-white hover:bg-slate-100 rounded-xl shadow-lg transition-all">
                     <i class="fa-brands fa-github text-xl mr-2"></i>GitHubでコードを見る
                 </a>
-                <a href="mailto:shoji.yano@gmail.com" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-lg transition-all">
+                <a href="mailto:codeforashiya@gmail.com" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-lg transition-all">
                     <i class="fa-solid fa-envelope text-xl mr-2"></i>メールを送る
                 </a>
             </div>
@@ -461,9 +573,13 @@
                 </div>
                 <span class="font-bold text-white text-lg">Code for Ashiya</span>
             </div>
-            <p class="text-xs text-slate-500 max-w-md text-center md:text-left">
-                本サイトは Code for Ashiya が運営するオープンソース・プラットフォーム群の総合窓口です。今日、あなたのひと声から民主主義のハックは始まります。
-            </p>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="#prospectus" class="hover:text-white transition-colors">設立趣旨書</a>
+                <a href="#platforms" class="hover:text-white transition-colors">プラットフォーム</a>
+                <a href='./activity-report.html'" class="hover:text-emerald-400 transition-colors flex items-center gap-1 font-semibold text-emerald-400">
+                    <i class="fa-solid fa-chart-line text-xs"></i>活動報告
+                </a>
+            </div>
             <div class="flex space-x-6 text-xl">
                 <a href="https://github.com/mimo-lgtm/codeForAshiya" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
                     <i class="fa-brands fa-github"></i>
