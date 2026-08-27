@@ -16,25 +16,17 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
-    <!-- ヘッダー -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+   <!-- ヘッダー -->
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 relative overflow-hidden group">
-                    <svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- C (Civic) -->
-                        <path d="M42 28C32 28 26 35 26 50C26 65 32 72 42 72" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
-                        <!-- f (for) -->
-                        <path d="M52 28H64M58 28V62C58 67 61 70 66 70" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- A (Ashiya) / Connection Node -->
-                        <path d="M72 72L80 40L88 72M75 58H85" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="80" cy="35" r="4" fill="#34D399" />
-                    </svg>
-                    <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <!-- 添付いただいたロゴ画像 (cfalogo.png) を使用 -->
+                <div class="w-12 h-12 flex items-center justify-center relative group">
+                    <img src="cfalogo.png" alt="Code for Ashiya ロゴ" class="w-11 h-11 object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/100x100/0284c7/ffffff?text=CfA'">
                 </div>
                 <div>
-                    <span class="font-bold text-lg tracking-tight text-slate-900 block leading-tight">Code for Ashiya</span>
-                    <span class="text-[10px] text-emerald-600 font-semibold tracking-wider uppercase block">Civic Tech Platform</span>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900 block leading-none">Code for Ashiya</span>
+                    <span class="text-[11px] text-emerald-600 font-bold tracking-widest uppercase block mt-1">Civic Tech Platform</span>
                 </div>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
@@ -42,20 +34,21 @@
                 <a href="#about" class="hover:text-emerald-600 transition-colors">背景・課題</a>
                 <a href="#mechanisms" class="hover:text-emerald-600 transition-colors">3つのメカニズム</a>
                 <a href="#platforms" class="hover:text-emerald-600 transition-colors">プラットフォーム一覧</a>
-                <a href="activity-report.html" class="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1">
+                <a href="activity-report.html" class="text-emerald-600 hover:text-emerald-700 font-bold flex items-center gap-1.5 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200 transition-all">
                     <i class="fa-solid fa-chart-line text-xs"></i>活動報告
                 </a>
             </nav>
             <div class="flex items-center space-x-3">
-                <a href="activity-report.html" class="hidden sm:inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-all border border-emerald-200">
-                    <i class="fa-solid fa-chart-line mr-1.5"></i>活動報告
+                <a href="activity-report.html" class="sm:hidden inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-all border border-emerald-200">
+                    <i class="fa-solid fa-chart-line mr-1"></i>活動報告
                 </a>
-                <a href="#platforms" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-all duration-200">
+                <a href="#platforms" class="inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-md transition-all duration-200">
                     プラットフォームを見る
                 </a>
             </div>
         </div>
     </header>
+
 
     <!-- ヒーローセクション -->
     <section class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-emerald-50/50 via-white to-slate-50">
@@ -564,19 +557,20 @@
         </div>
     </section>
 
-    <!-- フッター -->
+    !-- フッター -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm">
-                    A
+                <!-- フッター用のロゴ画像表示 -->
+                <div class="w-9 h-9 flex items-center justify-center">
+                    <img src="cfalogo.png" alt="Code for Ashiya ロゴ" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100/0284c7/ffffff?text=CfA'">
                 </div>
                 <span class="font-bold text-white text-lg">Code for Ashiya</span>
             </div>
             <div class="flex items-center space-x-6 text-sm">
                 <a href="#prospectus" class="hover:text-white transition-colors">設立趣旨書</a>
                 <a href="#platforms" class="hover:text-white transition-colors">プラットフォーム</a>
-                <a href='./activity-report.html'" class="hover:text-emerald-400 transition-colors flex items-center gap-1 font-semibold text-emerald-400">
+                <a href="activity-report.html" class="hover:text-emerald-400 transition-colors flex items-center gap-1 font-semibold text-emerald-400">
                     <i class="fa-solid fa-chart-line text-xs"></i>活動報告
                 </a>
             </div>
