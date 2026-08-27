@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code for Ashiya - 市民主導の民主主義・ハックプラットフォーム</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- ヘッダー -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-emerald-500/20">
+                    A
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">Code for Ashiya</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-emerald-600 transition-colors">背景・課題</a>
+                <a href="#mechanisms" class="hover:text-emerald-600 transition-colors">3つのメカニズム</a>
+                <a href="#platforms" class="hover:text-emerald-600 transition-colors">プラットフォーム一覧</a>
+                <a href="#howitworks" class="hover:text-emerald-600 transition-colors">使い方</a>
+                <a href="#contact" class="hover:text-emerald-600 transition-colors">運営・お問い合わせ</a>
+            </nav>
+            <div>
+                <a href="#platforms" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-all duration-200">
+                    プラットフォームを見る
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-emerald-50/50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-6">
+                    <i class="fa-solid fa-seedling mr-1.5 text-emerald-600"></i>最小単位の自治会から始まる
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                    市民主導の民主主義<br><span class="text-emerald-600">ハックプラットフォーム</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
+                    多様な市民の声を活かす、新しい意思決定の仕組みを創る。音声認識とAIで「誰も取り残さず」に「まとまった民意の塊」を可視化し、市民と行政が共に歩む、共創のためのインフラです。
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium text-slate-600">
+                    <span class="bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">FOUNDER: 矢野 昭二</span>
+                    <span class="bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">LICENSE: MIT / OSS</span>
+                    <span class="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full border border-emerald-200 shadow-sm">山手町実証実験中</span>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#platforms" class="px-8 py-3.5 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-lg shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5">
+                        プラットフォームを見る →
+                    </a>
+                    <a href="#about" class="px-8 py-3.5 text-base font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 rounded-xl shadow-sm transition-all">
+                        設立趣旨・背景を読む
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 背景と問題意識 (WHY WE BUILD) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold text-sm tracking-wider uppercase">WHY WE BUILD</span>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight mt-2 mb-4">これまでの行政プロセスの課題と問題意識</h2>
+                <p class="text-slate-600 text-lg">お上主導から市民主導へ。民主主義の最小単位から変革を起こす。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">行政プロセスの限界</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        パブリックコメントや従来のアンケートでは、せっかくの貴重な市民の意見が十分に集約されず、行政と市民の対話の機会が限られていました。
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-users-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">草の根の分断</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        自治会は高齢化・役員不足・新住民の孤立に直面。声の大きい人の利益誘導や不満の吐き溜めになり、本来の合意形成が機能不全に陥っています。
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">市民の武器の欠如</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        生活課題をデータ化し、行政・議会と対等に交渉するためのOS（合意形成の仕組み）がこれまでの社会に存在していませんでした。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-emerald-900 text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-3xl">
+                    <h3 class="text-2xl font-bold mb-4">ボトムアップによる「共通の土台」の構築</h3>
+                    <p class="text-emerald-100 text-base sm:text-lg leading-relaxed">
+                        行政任せのトップダウンではなく、市民一人ひとりの声がしっかりと反映されるボトムアップの仕組みが必要です。民主主義の最小単位である「自治会」から、住民全員の声をAIで美しく構造化し、みんなでより良い地域をつくるための「共通の土台」を作りたい——そんな想いから生まれたのが <strong>community-association</strong> です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解決策と3つのメカニズム -->
+    <section id="mechanisms" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold text-sm tracking-wider uppercase">MECHANISMS</span>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight mt-2 mb-4">解決策と3つのメカニズム</h2>
+                <p class="text-slate-600 text-lg">誰も取り残さず、感情的な不満を政策レベルのデータへ昇華する</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 01 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-600 font-extrabold text-4xl mb-4">01</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">音声認識とAIによる完全包摂</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            スマホに向かって話すだけで投稿。デジタルが苦手な高齢者、集会に出られない子育て世代、これまで沈黙を強いられてきたサイレントマジョリティを徹底的にすくい上げます。
+                        </p>
+                    </div>
+                    <div class="bg-emerald-50 px-4 py-2 rounded-lg text-emerald-800 text-xs font-semibold">
+                        <i class="fa-solid fa-microphone mr-1.5"></i> 音声入力・スマホ対応
+                    </div>
+                </div>
+                <!-- 02 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-600 font-extrabold text-4xl mb-4">02</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">愚痴を政策レベルの構造化データへ</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            AIが断片的な声を多角的に分析。類似テーマをリアルタイム統合し、感情的な不満を「行政が無視できないロジックツリー」へ昇華。5視点（核心・変化・成功事例・懸念点・問い）で自動要約します。
+                        </p>
+                    </div>
+                    <div class="bg-emerald-50 px-4 py-2 rounded-lg text-emerald-800 text-xs font-semibold">
+                        <i class="fa-solid fa-brain mr-1.5"></i> 5視点AI自動要約
+                    </div>
+                </div>
+                <!-- 03 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-600 font-extrabold text-4xl mb-4">03</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">行政と対等に交渉できる力の獲得</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            バラバラだった地域の声が自治会単位で美しく束ねられ可視化されることで、行政の縦割りや予算の壁を越え、議員や市民が建設的な対話と政策共創を行うための信頼性の高いデータとなります。
+                        </p>
+                    </div>
+                    <div class="bg-emerald-50 px-4 py-2 rounded-lg text-emerald-800 text-xs font-semibold">
+                        <i class="fa-solid fa-scale-balanced mr-1.5"></i> 政策共創のエビデンス
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プラットフォーム一覧 (#platforms) -->
+    <section id="platforms" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold text-sm tracking-wider uppercase">PLATFORMS</span>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight mt-2 mb-4">プラットフォーム一覧</h2>
+                <p class="text-slate-600 text-lg">地区町内会向け2つ ＋ 芦屋市の課題7つ。<br>すべて無償公開。スマホから参加でき、AIがリアルタイムに統合。</p>
+            </div>
+
+            <!-- 2大ベースOS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- 自治会・町内会版 -->
+                <div class="bg-slate-50 border-2 border-emerald-500/30 rounded-3xl p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl">
+                        BASE OS
+                    </div>
+                    <div>
+                        <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-2">地域社会インフラ</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">自治会・町内会版プラットフォーム</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            山手町をベースにした自治会の声を集約・構造化するベースOS。5つのテーマ×中分類で自動整理、音声入力対応。住民発案で新テーマを生成できる民主主義の最小実行単位。
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://mimo-lgtm.github.io/community-association/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-md transition-all">
+                            <span>プラットフォームを開く</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 高校生と地域の交流 -->
+                <div class="bg-slate-50 border-2 border-indigo-500/30 rounded-3xl p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl">
+                        INTER GENERATION
+                    </div>
+                    <div>
+                        <div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">世代を超えた交流</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">高校生と地域の交流プラットフォーム</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            甲南高校などの生徒と地域住民が世代を超えてつながるプラットフォーム。通学路の安全、放課後の居場所、10年後の街の未来像をスマホから自由に語り合えます。
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://mimo-lgtm.github.io/highSchool/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md transition-all">
+                            <span>プラットフォームを開く</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 芦屋市の課題 7つの対話ボード -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                    <i class="fa-solid fa-signs-post text-emerald-600 mr-2"></i> 芦屋市の課題 — 7つの対話ボード
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- #1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">🌿</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#1</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">芦屋未来会議プラットフォーム</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">緑と景観を大切に、どんな街にしたいか。芦屋の未来像を描く</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">👥</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#2</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">人口問題への本格的な取り組み</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">人口減少と高齢化。10年後を支える仕組みを考える</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">💬</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#3</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">市民の声でつくる、芦屋の明日。</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">日々の困りごとから市政要望まで、総合窓口として</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">📢</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#4</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">みんなで創ろう芦屋の広報</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">広報誌・LINE・HPのあり方を市民目線で再設計</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #5 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">🧸</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#5</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">未来の幼児教育 意見ひろば</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">待機児童や保育の質。子育て世代の声を政策へ</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #6 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">🏛️</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#6</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">駅前公共施設のあり方 皆で考えよう</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">駅前公共施設再編計画を、市民の手で問い直す</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    <!-- #7 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-2xl">🤝</span>
+                                <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">#7</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">議員を交えての対話とアイデア</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">市議会議員と市民が直接つながる、政策対話の場</p>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            <span>ボードを開く</span>
+                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使い方 (HOW IT WORKS) -->
+    <section id="howitworks" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold text-sm tracking-wider uppercase">HOW IT WORKS</span>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight mt-2 mb-4">使い方・3ステップ</h2>
+                <p class="text-slate-600 text-lg">思いついたまま自由記述。設問なし。音声入力OK。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="absolute -top-4 left-8 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        STEP 01
+                    </div>
+                    <div class="text-3xl mb-4 mt-2">✍️</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">自由に書く、または音声入力</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        スマホに向かって話すだけ。形式は不要。高齢者も高校生も、感じたことをそのまま思いついたまま自由記述。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="absolute -top-4 left-8 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        STEP 02
+                    </div>
+                    <div class="text-3xl mb-4 mt-2">🤖</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">AIが整理する</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        AIが5つの視点（核心・変化・成功事例・懸念点・問い）で分析し、要約・タイトル・テーマを自動生成。類似投稿はリアルタイム検出。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="absolute -top-4 left-8 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        STEP 03
+                    </div>
+                    <div class="text-3xl mb-4 mt-2">📌</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">ボードに掲示・統合</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        同じテーマは既存の統合記事へマージ。元記事は履歴として保存。3件たまると新中分類を自動生成。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 特徴サマリー -->
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm">
+                <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">仕組みの特徴 — 共創のインフラ × 誰も取り残さない優しさ</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-3xl mb-3">🫶</div>
+                        <h4 class="font-bold text-slate-900 mb-2">誰も取り残さないアクセシビリティ</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">音声認識でデジタルが苦手な方も参加。山手町の高齢者から甲南高校の生徒まで同じテーブルに。</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-3">🧬</div>
+                        <h4 class="font-bold text-slate-900 mb-2">愚痴から政策データへ</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">感情的な不満が、AIの多角分析によりロジックに裏打ちされた地域課題ツリーへ昇華。</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-3">⚖️</div>
+                        <h4 class="font-bold text-slate-900 mb-2">未来を切り拓く共創のエビデンス</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">丁寧に束ねられた確かな民意は、行政と市民が共に地域の未来をデザインする力強い指針に。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ / メンバー応募 (CONTACT & OSS) -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-emerald-400 font-semibold text-sm tracking-wider uppercase">CONTACT & OSS</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-2 mb-6">
+                お問い合わせ / メンバー応募
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                スキルや経験は問いません。草の根の民主主義をボトムアップで再定義するための実験に参加しませんか？
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
+                <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-user-pen text-emerald-400 mr-2"></i> 開発者
+                    </h3>
+                    <p class="text-white font-semibold mb-1">矢野 昭二</p>
+                    <p class="text-slate-400 text-sm mb-4">shoji.yano@gmail.com</p>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        芦屋市在住。個人開発からCode for Ashiyaへ移行し、公益性・中立性・透明性を担保。草の根の民主主義をボトムアップで再定義中。
+                    </p>
+                </div>
+                <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-people-group text-emerald-400 mr-2"></i> 運営主体
+                    </h3>
+                    <p class="text-white font-semibold mb-1">Code for Ashiya</p>
+                    <p class="text-slate-400 text-sm mb-4">MIT License / 無償公開</p>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        公益性・中立性・公平性・透明性を担保したパブリックなシビックテックインフラ。全国の自治会・町内会・教育現場へ横展開。
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://github.com/mimo-lgtm/codeForAshiya" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-slate-900 bg-white hover:bg-slate-100 rounded-xl shadow-lg transition-all">
+                    <i class="fa-brands fa-github text-xl mr-2"></i>GitHubでコードを見る
+                </a>
+                <a href="mailto:shoji.yano@gmail.com" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-lg transition-all">
+                    <i class="fa-solid fa-envelope text-xl mr-2"></i>メールを送る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm">
+                    A
+                </div>
+                <span class="font-bold text-white text-lg">Code for Ashiya</span>
+            </div>
+            <p class="text-xs text-slate-500 max-w-md text-center md:text-left">
+                本サイトは Code for Ashiya が運営するオープンソース・プラットフォーム群の総合窓口です。今日、あなたのひと声から民主主義のハックは始まります。
+            </p>
+            <div class="flex space-x-6 text-xl">
+                <a href="https://github.com/mimo-lgtm/codeForAshiya" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
